@@ -1,0 +1,26 @@
+body {
+    background-image: url('../images/Throne.jpg');
+    /* background-repeat: no-repeat; */
+}
+
+.text-muted {
+    color: blue;
+}
+
+.last-seconds {
+    color: red;
+}
+
+.option {
+    margin: 15px;
+}
+
+button {
+    width: 500px;
+}
+
+.jumbotron {
+    height: 1100px;
+    margin-top: 25px;
+    font-size: 12px;
+}
