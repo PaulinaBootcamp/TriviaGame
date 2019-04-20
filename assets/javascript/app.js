@@ -120,7 +120,6 @@ var trivia = {
         // to prevent timer speed up
         if (!trivia.timerOn) {
             trivia.timerId = setInterval(trivia.timerRunning, 1000);
-
         }
 
         // gets all the questions then indexes the current questions
@@ -157,7 +156,7 @@ var trivia = {
             trivia.result = false;
             clearInterval(trivia.timerId);
             resultId = setTimeout(trivia.guessResult, 5000);
-            $('#results').html('<h3>Out of time! The answer was ' + Object.values(trivia.answers)[trivia.questionQuestionIndex] + '</h3>');
+            $('#results').html('<h3>Time\'s up! The answer was "' + Object.values(trivia.answers)[trivia.questionQuestionIndex] + '"</h3>');
             //show fact and gif
             trivia.showFact();
         }
@@ -195,8 +194,7 @@ var trivia = {
             $(this).addClass('btn-success').removeClass('btn-info');
 
             trivia.correct++;
-            // clearInterval(trivia.timerId);
-            clearTimeout(trivia.timerId);
+            clearInterval(trivia.timerId);
             resultId = setTimeout(trivia.guessResult, 5000);
 
             $('#results').html('<h3>Correct Answer!</h3>');
@@ -211,7 +209,7 @@ var trivia = {
             clearInterval(trivia.timerId);
             resultId = setTimeout(trivia.guessResult, 5000);
 
-            $('#results').html('<h3>Better luck next time! Correct answer was ' + currentAnswer + '</h3>');
+            $('#results').html('<h3>Nope! Correct answer was "' + currentAnswer + '"</h3>');
             trivia.showFact();
         }
 

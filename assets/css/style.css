@@ -1,6 +1,7 @@
 body {
-    background-image: url('../images/Throne.jpg');
+    background-color: black;
     /* background-repeat: no-repeat; */
+    font-family: 'Merriweather', serif;
 }
 
 .text-muted {
@@ -8,7 +9,7 @@ body {
 }
 
 .last-seconds {
-    color: red;
+    color: orange;
 }
 
 .option {
@@ -19,8 +20,25 @@ button {
     width: 500px;
 }
 
-.jumbotron {
-    height: 1100px;
+.container {
     margin-top: 25px;
-    font-size: 12px;
+    padding: 15px;
+    /* background-color: #333333; */
+    background-image: url('../images/Dragon7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    color: white;
+    border-radius: 50px;
+}
+
+#results {
+    color: white;
+    opacity: 100;
+}
+
+.opaque {
+    /* background-color: black; */
+    /* opacity: .6; */
 }
